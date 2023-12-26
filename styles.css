@@ -74,7 +74,15 @@ nav ul li a {
   border-radius: 5px;
   display: flex;
   align-items: center;
+  transition: opacity 1s ease-out; /* Transition effect for fading */
+  opacity: 1; /* Start fully visible */
 }
+
+.hidden {
+  opacity: 0; /* Fully transparent */
+  visibility: hidden; /* Hide after transition */
+}
+
 
 .checkmark {
   margin-right: 10px;

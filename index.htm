@@ -56,19 +56,34 @@
 
     </div>
   </section>
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevents the default form submission action
-  
-        // Show the confirmation message
-        document.getElementById('confirmationMessage').style.display = 'flex';
-  
-        // You can add additional logic here for what to do when the form is submitted
-        // For example, sending form data using AJAX
-      });
+
+ 
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevents the default form submission action
+
+      // Show the confirmation message
+      const confirmationMessage = document.getElementById('confirmationMessage');
+      confirmationMessage.style.display = 'flex';
+      confirmationMessage.classList.remove('hidden');
+
+      // Wait for 3 seconds, then start fading out
+      setTimeout(() => {
+        confirmationMessage.classList.add('hidden');
+
+        // Optionally, hide the message completely after the fade-out transition (1s later)
+        setTimeout(() => {
+          confirmationMessage.style.display = 'none';
+        }, 1000);
+      }, 3000); // 3000ms = 3 seconds
+
+      // Additional form submission logic goes here
     });
-  </script>
+  });
+</script>
+
+
   
   <footer>
     <div class="container">
