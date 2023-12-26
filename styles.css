@@ -66,6 +66,19 @@ nav ul li a {
   text-decoration: none;
   border-radius: 4px;
 }
+.confirmation-message {
+  color: white;
+  background-color: green;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.checkmark {
+  margin-right: 10px;
+}
 
 /* About section styles */
 #about {

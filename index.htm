@@ -51,7 +51,20 @@
       </form>
     </div>
   </section>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the default form submission action
+  
+        // Show the confirmation message
+        document.getElementById('confirmationMessage').style.display = 'flex';
+  
+        // You can add additional logic here for what to do when the form is submitted
+        // For example, sending form data using AJAX
+      });
+    });
+  </script>
+  
   <footer>
     <div class="container">
       <p>&copy; 2023 Startup Company. All rights reserved.</p>
