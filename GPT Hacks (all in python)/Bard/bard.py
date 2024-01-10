@@ -1,6 +1,5 @@
 import os
 import requests
-from tempfile import NamedTemporaryFile
 import climage  
 from os import unlink
 from bardapi import Bard
